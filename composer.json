@@ -32,6 +32,10 @@
 	},
 	"require": {
 		"php":             "5.6.*",
+		"ext-pdo":         "*",
+		"ext-pdo_mysql":   "*",
+		"ext-mbstring":    "*",
+		"pxn/phpUtils":    "0.1.*",
 		"twig/twig":       "v1.24.*"
 	},
 	"require-dev": {
