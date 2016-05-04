@@ -1,5 +1,7 @@
 **/config.php
 **/auth.json
+public/static/bootstrap
+public/static/jquery
 
 **/vendor/
 **/composer.phar
