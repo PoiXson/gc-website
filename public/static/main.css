@@ -1,0 +1,29 @@
+.navbar {
+  background-color: #ccff9a !important;
+  border-color: #707070 !important;
+  border-radius: 0 !important;
+  border-top-width: 0 !important;
+  border-bottom-width: 2px !important;
+  border-left-width: 0 !important;
+  border-right-width: 0 !important;
+}
+ul.nav > li > a {
+  background-color: transparent !important;
+  color: #5f5f5f !important;
+}
+ul.nav > li > a:hover,
+ul.nav > li.active > a:hover {
+  background-color: #bfe8f2 !important;
+}
+ul.nav > li.active > a {
+  background-color: #ebffcc !important;
+}
+.navbar-brand > img {
+  margin-top: -12px;
+}
+#navbar-search-text {
+  background-color: #efefef !important;
+}
+#navbar-search-button {
+  background-color: #ffcb8d !important;
+}
