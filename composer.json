@@ -36,7 +36,9 @@
 		"ext-pdo_mysql":   "*",
 		"ext-mbstring":    "*",
 		"pxn/phpUtils":    "0.1.*",
-		"twig/twig":       "v1.24.*"
+		"twig/twig":       "v1.24.*",
+		"twbs/bootstrap":  "v3.3.*",
+		"components/jquery": "2.2.*"
 	},
 	"require-dev": {
 		"phpunit/phpunit": "5.*"
