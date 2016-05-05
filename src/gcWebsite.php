@@ -7,6 +7,9 @@
  */
 namespace pxn\gcWebsite;
 
+use pxn\phpUtils\Config;
+use pxn\phpUtils\Defines;
+
 
 class gcWebsite extends \pxn\phpUtils\portal\Website {
 
@@ -15,7 +18,8 @@ class gcWebsite extends \pxn\phpUtils\portal\Website {
 	public function __construct() {
 		parent::__construct();
 		// fav icon
-		$this->setIcon('static/treeicon.ico');
+		Config::set(Defines::KEY_SITE_TITLE, '{pagetitle} - GrowControl');
+		Config::set(Defines::KEY_FAV_ICON,   'static/treeicon.ico');
 	}
 
 
