@@ -18,10 +18,10 @@ namespace pxn\gcWebsite;
 	$found = FALSE;
 	foreach ($search_paths as $path) {
 		if (empty($path)) continue;
-		$path = \realpath($path.'/vendor/');
+		$path = \realpath("{$path}/vendor/");
 		if (empty($path)) continue;
-		if (\file_exists($path.'/autoload.php')) {
-			require($path.'/autoload.php');
+		if (\is_file("{$path}/autoload.php")) {
+			require("{$path}/autoload.php");
 			$found = TRUE;
 			break;
 		}
