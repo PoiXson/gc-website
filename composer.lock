@@ -51,22 +51,27 @@
         },
         {
             "name": "pxn/phputils",
-            "version": "0.1.17",
+            "version": "0.1.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PoiXson/phpUtils.git",
-                "reference": "38534d005246dcc76162b6fecb30bce3da9c7304"
+                "reference": "136d128c39be231074d544b3edd0c0642ea77f74"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PoiXson/phpUtils/zipball/38534d005246dcc76162b6fecb30bce3da9c7304",
-                "reference": "38534d005246dcc76162b6fecb30bce3da9c7304",
+                "url": "https://api.github.com/repos/PoiXson/phpUtils/zipball/136d128c39be231074d544b3edd0c0642ea77f74",
+                "reference": "136d128c39be231074d544b3edd0c0642ea77f74",
                 "shasum": ""
             },
             "require": {
                 "php": "5.6.*"
             },
             "require-dev": {
+                "51systems/doctrine-encrypt": "v5.0.*",
+                "ext-mbstring": "*",
+                "ext-pdo": "*",
+                "ext-pdo_mysql": "*",
+                "filp/whoops": "2.1.*",
                 "phpunit/phpunit": "5.*",
                 "symfony/console": "v3.0.*",
                 "twig/twig": "v1.24.*"
@@ -96,7 +101,7 @@
                 "framework",
                 "utilities"
             ],
-            "time": "2016-04-14 23:36:34"
+            "time": "2016-05-05 20:32:30"
         },
         {
             "name": "twbs/bootstrap",
