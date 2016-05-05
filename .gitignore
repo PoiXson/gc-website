@@ -1,5 +1,6 @@
 **/config.php
 **/auth.json
+.cache/
 public/static/bootstrap
 public/static/jquery
 
