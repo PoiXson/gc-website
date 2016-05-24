@@ -15,6 +15,9 @@ class gcWebsite extends \pxn\phpUtils\portal\Website {
 
 
 
+	public static function autoinit() {
+		return new self();
+	}
 	public function __construct() {
 		parent::__construct();
 		// fav icon
