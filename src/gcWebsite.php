@@ -11,7 +11,7 @@ use pxn\phpUtils\Config;
 use pxn\phpUtils\Defines;
 
 
-class gcWebsite extends \pxn\phpUtils\portal\Website {
+class gcWebsite extends \pxn\phpPortal\Website {
 
 
 
