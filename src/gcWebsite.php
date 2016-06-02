@@ -27,4 +27,10 @@ class gcWebsite extends \pxn\phpPortal\Website {
 
 
 
+	public function getDefaultPage() {
+		return 'blog';
+	}
+
+
+
 }
