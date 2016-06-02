@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "0d119092840a3e86584b28d8dc4f5162",
-    "content-hash": "71305f89ec350f5d2d30383210282df8",
+    "hash": "4bf21ec1a615f7451d4f7f00e3b43455",
+    "content-hash": "40d4f9d97e767f86b87ca839e25ff9c6",
     "packages": [
         {
             "name": "components/jquery",
@@ -48,6 +48,58 @@
             "description": "jQuery JavaScript Library",
             "homepage": "http://jquery.com",
             "time": "2016-05-25 06:43:59"
+        },
+        {
+            "name": "pxn/phpportal",
+            "version": "0.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PoiXson/phpPortal.git",
+                "reference": "84006fe9c7a5f6686e207258b09f5947e5a68c25"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PoiXson/phpPortal/zipball/84006fe9c7a5f6686e207258b09f5947e5a68c25",
+                "reference": "84006fe9c7a5f6686e207258b09f5947e5a68c25",
+                "shasum": ""
+            },
+            "require": {
+                "php": "5.6.*",
+                "pxn/phputils": "0.1.*"
+            },
+            "require-dev": {
+                "51systems/doctrine-encrypt": "v5.0.*",
+                "ext-mbstring": "*",
+                "ext-pdo": "*",
+                "ext-pdo_mysql": "*",
+                "filp/whoops": "2.1.*",
+                "phpunit/phpunit": "5.*",
+                "symfony/console": "v3.0.*",
+                "twig/twig": "v1.24.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "pxn\\phpPortal\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "lorenzop",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Website Utilities Library",
+            "homepage": "http://poixson.com/",
+            "keywords": [
+                "framework",
+                "utilities"
+            ],
+            "time": "2016-05-30 12:23:01"
         },
         {
             "name": "pxn/phputils",
