@@ -1,0 +1,32 @@
+<style>
+.blog-row {
+}
+</style>
+<div class="row blog-row">
+
+{% if entries is empty %}
+<h2 class="panel panel-default text-center"
+	style="padding-top: 30px; padding-bottom: 30px;">Sorry, no content to display just yet.</h2>
+{% endif %}
+
+{% for entry in entries %}
+
+	{% if entry.rowNum > 1 %}<hr style="width: 90%; margin-top: 30px; margin-bottom: 30px;" />{% endif %}
+
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<strong>{{ entry.title }}</strong>
+			<div style="float: right;">{{ entry.timeSinceText }}</div>
+		</div>
+		<div class="panel-body">
+			{{ entry.body }}
+		</div>
+		<div class="panel-footer">
+			<small>Comments:&nbsp;&nbsp;[ {{ entry.commentCount }} ]</small>
+			<div style="float: right;"><small>{{ entry.dateFormatted }}</small></div>
+		</div>
+	</div>
+
+{%  endfor %}
+
+</div>

@@ -8,14 +8,6 @@
 namespace pxn\gcWebsite\pages;
 
 
-class page_blog implements \pxn\phpUtils\portal\Page {
-
-
-
-	public function getPageContents() {
-		return 'BLOG';
-	}
-
-
+class page_blog extends \pxn\phpPortal\pages\Blog {
 
 }
