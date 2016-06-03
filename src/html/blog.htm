@@ -15,14 +15,14 @@
 
 	<div class="panel panel-default">
 		<div class="panel-heading">
-			<strong>{{ entry.title }}</strong>
+			<a href="/blog/{{ entry.id }}/" style="color: #000033;"><strong>{{ entry.title }}</strong></a>
 			<div style="float: right;">{{ entry.timeSinceText }}</div>
 		</div>
 		<div class="panel-body">
 			{{ entry.body }}
 		</div>
 		<div class="panel-footer">
-			<small>Comments:&nbsp;&nbsp;[ {{ entry.commentCount }} ]</small>
+			<a href="/blog/{{ entry.id }}/#comments"><small>Comments:&nbsp;&nbsp;[ {{ entry.commentCount }} ]</small></a>
 			<div style="float: right;"><small>{{ entry.dateFormatted }}</small></div>
 		</div>
 	</div>
