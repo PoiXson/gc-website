@@ -9,18 +9,22 @@
 	style="padding-top: 30px; padding-bottom: 30px;">Sorry, no content to display just yet.</h2>
 {% endif %}
 
+<!-- blog entries -->
 {% for entry in entries %}
 
 	{% if entry.rowNum > 1 %}<hr style="width: 90%; margin-top: 30px; margin-bottom: 30px;" />{% endif %}
 
 	<div class="panel panel-default">
+		<!-- heading -->
 		<div class="panel-heading">
 			<a href="/blog/{{ entry.id }}/" style="color: #000033;"><strong>{{ entry.title }}</strong></a>
 			<div style="float: right;">{{ entry.timeSinceText }}</div>
 		</div>
+		<!-- body -->
 		<div class="panel-body">
 			{{ entry.body }}
 		</div>
+		<!-- footer -->
 		<div class="panel-footer">
 			<a href="/blog/{{ entry.id }}/#comments"><small>Comments:&nbsp;&nbsp;[ {{ entry.commentCount }} ]</small></a>
 			<div style="float: right;"><small>{{ entry.dateFormatted }}</small></div>
