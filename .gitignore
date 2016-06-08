@@ -2,8 +2,11 @@ pxnloader.php
 **/config.php
 **/auth.json
 .cache/
+.twig_cache/
 public/static/bootstrap
 public/static/jquery
+error_log
+**/error_log
 
 **/vendor/
 **/composer.phar
