@@ -1,59 +1,140 @@
 <style>
-.blog-row {
+.blog-no-content {
+	padding-top:    30px;
+	padding-bottom: 30px;
+}
+.blog-entry-spacer {
+	width: 90%;
+	margin-top:    30px;
+	margin-bottom: 30px;
+}
+.blog-entry-heading a {
+	color: #000033;
+}
+.blog-entry-body {
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #dddddd;
+}
+.blog-comments {
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #dddddd;
+}
+
+.blog-no-comments {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+.blog-comment-form {
+	width: 50%;
+	min-width: 500px;
+}
+.blog-comment-spacer {
+	width: 90%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.blog-paginate a,
+.blog-paginate span {
+	padding: 2px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #d5d5f5;
+	border-radius: 5px;
+	background-color: #f5f5f5;
+}
+.blog-paginage-current {
+	font-weight: bold;
+	font-size: larger;
 }
 </style>
-<div class="row blog-row">
+<div class="row">
 
 {% if entries is empty %}
-<h2 class="panel panel-default text-center"
-	style="padding-top: 30px; padding-bottom: 30px;">Sorry, no content to display just yet.</h2>
+<h2 class="panel panel-default text-center blog-no-content">Sorry, no content to display just yet.</h2>
+
+{% else %}
+
+<!-- paginate -->
+<div class="blog-paginate" style="float: right;">
+<span>Page {{ paginate.current }} of {{ paginate.last }}</span>
+{% if paginate.last > 1 %}
+	<a href="/{{ page.name }}/" {% if paginate.current == 1 %} class="blog-paginage-current" {% endif %}>&lt;&lt; 1</a>
+	{% if paginate.last > 2 %}
+		{% if paginate.from > 2 %}
+			<span>...</span>
+		{% endif %}
+		{% for i in paginate.from .. paginate.to %}
+			<a href="/{{ page.name }}/page/{{ i }}/" {% if i == paginate.current %} class="blog-paginage-current" {% endif %}>{{ i }}</a>
+		{% endfor %}
+		{% if paginate.to + 1 < paginate.last %}
+			<span>...</span>
+		{% endif %}
+	{% endif %}
+	<a href="/{{ page.name }}/page/{{ paginate.last }}/" {% if paginate.current == paginate.last %} class="blog-paginage-current" {% endif %}>{{ paginate.last }} &gt;&gt;</a>
 {% endif %}
+</div>
+<br /><br />
 
 <!-- blog entries -->
 {% for entry in entries %}
 
-	{% if entry.rowNum > 1 %}<hr style="width: 90%; margin-top: 30px; margin-bottom: 30px;" />{% endif %}
+	{% if entry.rowNum > 1 %}<hr class="blog-entry-spacer" />{% endif %}
 
-	<div class="panel panel-default">
+	<div class="panel panel-default blog-entry">
 		<!-- heading -->
-		<div class="panel-heading">
-			<a href="/blog/{{ entry.id }}/" style="color: #000033;"><strong>{{ entry.title }}</strong></a>
+		<div class="panel-heading blog-entry-heading">
+			<a href="/{{ page.name }}/entry/{{ entry.id }}/"><strong>{% if entry.title is empty %}-&nbsp;-&nbsp;-{% else %}{{ entry.title }}{% endif %}</strong></a>
 			<div style="float: right;">{{ entry.timeSinceText }}</div>
 		</div>
 		<!-- body -->
-		<div class="panel-body">
+		<div class="panel-body blog-entry-body">
 			{{ entry.body }}
 		</div>
 		<!-- footer -->
-		<div class="panel-footer">
-			<a href="/blog/{{ entry.id }}/#comments"><small>Comments:&nbsp;&nbsp;[ {{ entry.commentCount }} ]</small></a>
+		<div class="panel-footer blog-entry-footer">
+			<a href="/{{ page.name }}/entry/{{ entry.id }}/#comments"><small>Comments:&nbsp;&nbsp;[ {{ entry.commentCount }} ]</small></a>
 			<div style="float: right;"><small>{{ entry.dateFormatted }}</small></div>
 		</div>
 
 		<!-- comments -->
 		{% if singleId > 0 %}
-		<div class="panel-body" style="border-top: 1px solid #dddddd;">
+		<div class="panel-body blog-comments">
 
-<!--
-			< ! - - comment form - - >
-			<center>
-			<form>
-				<input type="text" name="author" />
-				<br />
-				<textarea name="body"></textarea>
-				<br />
-				<input type="submit" value="Send Comment" />
-				<br />
+			<!-- comment form -->
+			<div class="container blog-comment-form">
+			<form action="#comments" method="POST" role="comment">
+				<fieldset class="form-group">
+				<div class="input-group">
+					<span class="input-group-addon" id="comment_name_addon">Name</span>
+					<input type="text" name="comment_author" class="form-control" placeholder="" aria-describedby="comment_name_addon" />
+				</div>
+				</fieldset>
+				<fieldset class="form-group">
+				<div class="input-group">
+					<span class="input-group-addon" id="comment_subject_addon">Subject</span>
+					<input type="text" name="comment_subject" class="form-control" placeholder="" aria-describedby="comment_subject_addon" />
+				</div>
+				</fieldset>
+				<fieldset class="form-group">
+					<textarea name="comment_body" class="form-control" style="height: 150px;" placeholder="comment"></textarea>
+				</fieldset>
+				<fieldset class="form-group">
+					<button type="submit" class="btn btn-primary center-block">&lt; Submit &gt;</button>
+				</fieldset>
 			</form>
-			</center>
--->
+			</div>
+
+			{% if comments is empty %}
+			<h4 class="panel panel-default text-center blog-no-comments">No comments yet. You could be the first?</h4>
+			{% endif %}
 
 			<!-- comments list -->
 			{% for comment in comments %}
-				{% if comment.commentNum > 1 %}<hr style="width: 90%; margin-top: 10px; margin-bottom: 10px;" />{% endif %}
-				<div>
-					{{ comment.author }}: {{ comment.body }}
-				</div>
+				{% if comment.commentNum > 1 %}<hr class="blog-comment-spacer" />{% endif %}
+				<div>{{ comment.author }}: {{ comment.body }}</div>
 			{% endfor %}
 
 		</div>
@@ -62,5 +143,27 @@
 	</div>
 
 {%  endfor %}
+{% endif %}
+
+<!-- paginate -->
+<div class="blog-paginate" style="float: right;">
+<span>Page {{ paginate.current }} of {{ paginate.last }}</span>
+{% if paginate.last > 1 %}
+	<a href="/{{ page.name }}/" {% if paginate.current == 1 %} class="blog-paginage-current" {% endif %}>&lt;&lt; 1</a>
+	{% if paginate.last > 2 %}
+		{% if paginate.from > 2 %}
+			<span>...</span>
+		{% endif %}
+		{% for i in paginate.from .. paginate.to %}
+			<a href="/{{ page.name }}/page/{{ i }}/" {% if i == paginate.current %} class="blog-paginage-current" {% endif %}>{{ i }}</a>
+		{% endfor %}
+		{% if paginate.to + 1 < paginate.last %}
+			<span>...</span>
+		{% endif %}
+	{% endif %}
+	<a href="/{{ page.name }}/page/{{ paginate.last }}/" {% if paginate.current == paginate.last %} class="blog-paginage-current" {% endif %}>{{ paginate.last }} &gt;&gt;</a>
+{% endif %}
+</div>
+<br /><br />
 
 </div>
