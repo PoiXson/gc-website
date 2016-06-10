@@ -51,16 +51,16 @@
         },
         {
             "name": "pxn/phpportal",
-            "version": "0.1.3",
+            "version": "0.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PoiXson/phpPortal.git",
-                "reference": "3254aa9f33f503035b1284e1a76c2eec1f8cc3e4"
+                "reference": "16fadddf76ebb33e69f6fe18b0ad73fc76679015"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PoiXson/phpPortal/zipball/3254aa9f33f503035b1284e1a76c2eec1f8cc3e4",
-                "reference": "3254aa9f33f503035b1284e1a76c2eec1f8cc3e4",
+                "url": "https://api.github.com/repos/PoiXson/phpPortal/zipball/16fadddf76ebb33e69f6fe18b0ad73fc76679015",
+                "reference": "16fadddf76ebb33e69f6fe18b0ad73fc76679015",
                 "shasum": ""
             },
             "require": {
@@ -99,20 +99,20 @@
                 "framework",
                 "utilities"
             ],
-            "time": "2016-06-09 03:58:32"
+            "time": "2016-06-10 17:51:31"
         },
         {
             "name": "pxn/phputils",
-            "version": "0.1.23",
+            "version": "0.1.24",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PoiXson/phpUtils.git",
-                "reference": "3acbd10b9b0b0ddc52da1f513db5d9747dadf6d5"
+                "reference": "0913328f596c2bb2a7436615eb89f2b3b5837548"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PoiXson/phpUtils/zipball/3acbd10b9b0b0ddc52da1f513db5d9747dadf6d5",
-                "reference": "3acbd10b9b0b0ddc52da1f513db5d9747dadf6d5",
+                "url": "https://api.github.com/repos/PoiXson/phpUtils/zipball/0913328f596c2bb2a7436615eb89f2b3b5837548",
+                "reference": "0913328f596c2bb2a7436615eb89f2b3b5837548",
                 "shasum": ""
             },
             "require": {
@@ -152,7 +152,7 @@
                 "framework",
                 "utilities"
             ],
-            "time": "2016-06-09 03:51:15"
+            "time": "2016-06-10 17:41:47"
         },
         {
             "name": "twbs/bootstrap",
