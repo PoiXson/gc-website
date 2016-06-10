@@ -1,7 +1,10 @@
 pxnloader.php
+update.sh
+.htdb*.php
 **/config.php
 **/auth.json
 .cache/
+.pxn_cache/
 .twig_cache/
 public/static/bootstrap
 public/static/jquery
