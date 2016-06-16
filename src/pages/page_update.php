@@ -11,6 +11,7 @@ namespace pxn\gcWebsite\pages;
 use pxn\phpPortal\pages\Blog_Queries;
 
 use pxn\phpUtils\pxdb\dbPool;
+use pxn\phpUtils\pxdb\dbUtils;
 use pxn\phpUtils\System;
 
 
@@ -29,7 +30,7 @@ class page_update extends \pxn\phpPortal\Page {
 		}
 		$pool = dbPool::getPool();
 		// create/update tables
-		$pool->UpdateTables();
+		dbUtils::UpdateTables($pool);
 		// update blog comment counts
 		{
 			$blogQueries = new Blog_Queries(
