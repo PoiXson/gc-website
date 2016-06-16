@@ -19,7 +19,9 @@ class table_users implements \pxn\phpUtils\pxdb\dbSchema {
 			],
 			'username' => [
 				'type' => 'varchar',
-				'size' => 32,
+				'size' => 16,
+				'nullable' => FALSE,
+				'unique' => TRUE,
 			],
 			'email' => [
 				'type' => 'varchar',

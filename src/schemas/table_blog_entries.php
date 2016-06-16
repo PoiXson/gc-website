@@ -19,7 +19,7 @@ class table_blog_entries implements \pxn\phpUtils\pxdb\dbSchema {
 			],
 			'title' => [
 				'type' => 'varchar',
-				'size' => 128,
+				'size' => 255,
 			],
 			'body' => [
 				'type' => 'text',
