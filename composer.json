@@ -42,12 +42,7 @@
 	},
 	"scripts": {
 		"post-update-cmd": [
-			"echo 'Creating symlinks..'",
-			"ln -svf vendor/pxn/phputils/update.sh update.sh",
-			"[ -d public/static ] || mkdir -pv public/static/",
-			"ln -svf ../../vendor/twbs/bootstrap/ public/static/",
-			"ln -svf ../../vendor/components/jquery/ public/static/",
-			"ln -svf vendor/pxn/phputils/pxnloader.php pxnloader.php"
+			"sh symlinks.sh"
 		]
 	}
 }
