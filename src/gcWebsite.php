@@ -7,28 +7,13 @@
  */
 namespace pxn\gcWebsite;
 
-use pxn\phpUtils\Config;
-use pxn\phpUtils\Defines;
 
-
-class gcWebsite extends \pxn\phpPortal\Website {
+class gcWebsite extends \pxn\phpPortal\WebApp {
 
 
 
-	public static function autoinit() {
-		return new self();
-	}
 	public function __construct() {
 		parent::__construct();
-		// fav icon
-		Config::set(Defines::KEY_SITE_TITLE, '{pagetitle} - GrowControl');
-		Config::set(Defines::KEY_FAV_ICON,   'static/treeicon.ico');
-	}
-
-
-
-	public function getDefaultPage() {
-		return 'blog';
 	}
 
 

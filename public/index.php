@@ -8,4 +8,5 @@ require(__DIR__.'/../pxnloader.php');
 
 //debug(TRUE);
 
-\pxn\gcWebsite\gcWebsite::autoinit();
+\pxn\gcWebsite\gcWebsite::init();
+\pxn\gcWebsite\gcShell::init();
