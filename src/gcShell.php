@@ -8,14 +8,7 @@
 namespace pxn\gcWebsite;
 
 
-class gcShell extends \pxn\phpUtils\app\ShellApp {
-
-
-
-	public function __construct() {
-		parent::__construct();
-	}
-
+class gcShell extends \pxn\phpPortal\Commands {
 
 
 }
