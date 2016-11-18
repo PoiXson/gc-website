@@ -4,7 +4,7 @@
  * @copyright 2004-2016
  * @author lorenzo at poixson.com
  * @link http://growcontrol.com/
- */
+ * /
 namespace pxn\gcWebsite;
 
 
@@ -67,3 +67,4 @@ namespace pxn\gcWebsite;
 
 $website = new \pxn\gcWebsite\gcWebsite();
 $website->doRender();
+*/
