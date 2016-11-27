@@ -11,5 +11,5 @@ require(__DIR__.'/../pxnloader.php');
 //debug(TRUE);
 
 $app = \pxn\gcWebsite\gcWebsite::register();
-//$app->setDefaultPage('blog');
+$app->setDefaultPage('blog');
 $app = \pxn\gcWebsite\gcShell::register();
