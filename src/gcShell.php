@@ -49,6 +49,7 @@ class gcShell extends \pxn\phpUtils\app\ShellApp {
 
 	public static function DisplayHelp() {
 //TODO:
+echo "\nHELP\n\n";
 		ExitNow(1);
 	}
 
