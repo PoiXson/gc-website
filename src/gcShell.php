@@ -55,8 +55,21 @@ class gcShell extends \pxn\phpUtils\app\ShellApp {
 
 
 	public static function DisplayHelp() {
-//TODO:
-echo "\nHELP\n\n";
+//TODO: use ShellHelp class for this
+		echo "\n";
+		echo " pxnPortal Tools\n";
+		echo " ===============\n";
+		echo "\n";
+		echo "Usage:\n";
+		echo "  [options] [--] [<command>]\n";
+		echo "\n";
+		echo "Available commands:\n";
+		echo "  db\n";
+		echo "\n";
+		echo "Options:\n";
+		echo "  -V, --version  Display the script version.\n";
+		echo "  -h, --help     This help message.\n";
+		echo "\n";
 		ExitNow(1);
 	}
 
