@@ -16,6 +16,13 @@ class gcShell extends \pxn\phpUtils\app\ShellApp {
 
 
 
+	public function __construct() {
+		self::setAllowShortFlagValues(TRUE);
+		parent::__construct();
+	}
+
+
+
 	protected function doRender() {
 		$result = parent::doRender();
 		if ($result !== TRUE) {
