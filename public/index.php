@@ -7,9 +7,14 @@ if (!\file_exists(__DIR__.'/../pxnloader.php')) {
 }
 require(__DIR__.'/../pxnloader.php');
 
+
 // uncomment to force debug mode
 //debug(TRUE);
 
+
+// gc website
 $app = register_app('pxn\\gcWebsite\\gcWebsite');
 $app->setDefaultPage('blog');
+
+// shell tools
 $app = register_app('pxn\\gcWebsite\\gcShell');
