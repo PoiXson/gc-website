@@ -10,6 +10,6 @@ require(__DIR__.'/../pxnloader.php');
 // uncomment to force debug mode
 //debug(TRUE);
 
-$app = \pxn\gcWebsite\gcWebsite::register();
+$app = register_app('pxn\\gcWebsite\\gcWebsite');
 $app->setDefaultPage('blog');
-$app = \pxn\gcWebsite\gcShell::register();
+$app = register_app('pxn\\gcWebsite\\gcShell');
