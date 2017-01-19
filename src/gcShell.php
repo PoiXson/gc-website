@@ -9,6 +9,8 @@ namespace pxn\gcWebsite;
 
 use pxn\phpUtils\ShellTools;
 use pxn\phpUtils\ShellHelp;
+use pxn\phpUtils\Defines;
+
 use pxn\phpUtils\pxdb\dbCommands;
 
 
@@ -44,11 +46,9 @@ class gcShell extends \pxn\phpUtils\app\ShellApp {
 			return TRUE;
 		}
 
-		if (ShellTools::isHelp()) {
-			self::DisplayHelp();
-			return NULL;
-		}
-		return FALSE;
+		echo "Invalid command: $arg\n";
+		self::DisplayHelp();
+		ExitNow(Defines::EXIT_CODE_GENERAL);
 	}
 
 
