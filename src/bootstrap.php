@@ -7,6 +7,7 @@
  * /
 namespace pxn\gcWebsite;
 
+use pxn\phpUtils\Defines;
 
 
 // find autoloader.php
@@ -27,16 +28,16 @@ namespace pxn\gcWebsite;
 		}
 	}
 	if (!$found) {
-		echo "\nFailed to find composer autoload.php !\n\n";
-		exit(1);
+		fail('Failed to find composer autoload.php',
+			Defines::EXIT_CODE_IO_ERROR);
 	}
 }
 //{
 //	$path = __DIR__.'/../../phpUtils/vendor/autoload.php';
 //	echo "\n *** Using local development copy of phpUtils! *** \n\n";
 //	if (!\file_exists($path)) {
-//		echo "Local copy of phpUtils couldn't be found: {$path}\n";
-//		exit(1);
+//		fail("Local copy of phpUtils couldn't be found: $path",
+//			Defines::EXIT_CODE_IO_ERROR);
 //	}
 //	$path = \realpath($path);
 //	if (empty($path)) {
