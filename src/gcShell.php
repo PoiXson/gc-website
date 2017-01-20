@@ -33,22 +33,22 @@ class gcShell extends \pxn\phpUtils\app\ShellApp {
 		$arg = \strtolower(ShellTools::getArg());
 		if (empty($arg)) {
 			self::DisplayHelp();
-			return NULL;
+			ExitNow(Defines::EXIT_CODE_GENERAL);
 		}
 
 		// db command
 		if ($arg == 'db') {
 			$result = dbCommands::run();
-			if ($result !== TRUE) {
-				return FALSE;
-			}
 			$this->setRendered();
+			if ($result !== TRUE) {
+				ExitNow(Defines::EXIT_CODE_INTERNAL_ERROR);
+			}
 			return TRUE;
 		}
 
 		echo "Invalid command: $arg\n";
 		self::DisplayHelp();
-		ExitNow(Defines::EXIT_CODE_GENERAL);
+		ExitNow(Defines::EXIT_CODE_INVALID_COMMAND);
 	}
 
 
@@ -69,7 +69,6 @@ class gcShell extends \pxn\phpUtils\app\ShellApp {
 		echo "  -V, --version  Display the script version.\n";
 		echo "  -h, --help     This help message.\n";
 		echo "\n";
-		ExitNow(1);
 	}
 
 
