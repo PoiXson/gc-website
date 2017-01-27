@@ -26,10 +26,7 @@ class gcShell extends \pxn\phpUtils\app\ShellApp {
 
 
 	protected function doRender() {
-		$result = parent::doRender();
-		if ($result !== TRUE) {
-			return $result;
-		}
+		parent::doRender();
 		$arg = \strtolower(ShellTools::getArg());
 		if (empty($arg)) {
 			self::DisplayHelp();
