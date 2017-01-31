@@ -23,6 +23,14 @@ if [[ "$1" == "--restore" ]] || [[ "$1" == "--pre" ]]; then
 		popd
 	fi
 
+	if [ -L "vendor/pxn/pxdb" ]; then
+		pushd "vendor/pxn" || exit 1
+			rm -fv pxdb || exit 1
+			[[ -d pxdb.original ]] && \
+				mv -v pxdb.original pxdb || exit 1
+		popd
+	fi
+
 
 else
 
@@ -53,6 +61,16 @@ else
 			[[ ! -L phpportal ]] && \
 				mv -v phpportal phpportal.original
 			ln -svf ../../../phpPortal/ phpportal
+		popd
+	fi
+
+	if [ -d "../pxdb/" ]; then
+		echo
+		echo ' *** Found local pxdb..'
+		pushd "vendor/pxn/" || exit 1
+			[[ ! -L pxdb ]] && \
+				mv -v pxdb pxdb.original
+			ln -svf ../../../pxdb/ pxdb
 		popd
 	fi
 
