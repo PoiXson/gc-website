@@ -11,8 +11,6 @@ use pxn\phpUtils\ShellTools;
 use pxn\phpUtils\ShellHelp;
 use pxn\phpUtils\Defines;
 
-use pxn\phpUtils\pxdb\dbCommands;
-
 
 class gcShell extends \pxn\phpUtils\app\ShellApp {
 
@@ -35,7 +33,7 @@ class gcShell extends \pxn\phpUtils\app\ShellApp {
 
 		// db command
 		if ($arg == 'db') {
-			$result = dbCommands::run();
+			$result = \pxn\pxdb\shell\dbCommands::RunShellCommand();
 			$this->setRendered();
 			if ($result !== TRUE) {
 				ExitNow(Defines::EXIT_CODE_INTERNAL_ERROR);
