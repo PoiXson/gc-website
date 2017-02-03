@@ -52,12 +52,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/PoiXson/phpPortal.git",
-                "reference": "921fd0257c685cfbca2b63730cb31eb15e5d3edb"
+                "reference": "b5d88f02d8bd0ef402e9f01437f0edad12dd931b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PoiXson/phpPortal/zipball/921fd0257c685cfbca2b63730cb31eb15e5d3edb",
-                "reference": "921fd0257c685cfbca2b63730cb31eb15e5d3edb",
+                "url": "https://api.github.com/repos/PoiXson/phpPortal/zipball/b5d88f02d8bd0ef402e9f01437f0edad12dd931b",
+                "reference": "b5d88f02d8bd0ef402e9f01437f0edad12dd931b",
                 "shasum": ""
             },
             "require": {
@@ -95,7 +95,7 @@
                 "framework",
                 "utilities"
             ],
-            "time": "2017-01-31T11:51:02+00:00"
+            "time": "2017-01-31T15:55:50+00:00"
         },
         {
             "name": "pxn/phputils",
@@ -150,12 +150,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/PoiXson/pxdb.git",
-                "reference": "33524e8af9e3e2fe4568026a45ff61db77e86aa2"
+                "reference": "504a59d2178253b0d98a747e96a27d2b5c00735e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PoiXson/pxdb/zipball/33524e8af9e3e2fe4568026a45ff61db77e86aa2",
-                "reference": "33524e8af9e3e2fe4568026a45ff61db77e86aa2",
+                "url": "https://api.github.com/repos/PoiXson/pxdb/zipball/504a59d2178253b0d98a747e96a27d2b5c00735e",
+                "reference": "504a59d2178253b0d98a747e96a27d2b5c00735e",
                 "shasum": ""
             },
             "require": {
@@ -172,10 +172,7 @@
             "autoload": {
                 "psr-4": {
                     "pxn\\pxdb\\": "src/"
-                },
-                "files": [
-                    "src/init.php"
-                ]
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -195,7 +192,7 @@
                 "mysql",
                 "utilities"
             ],
-            "time": "2017-01-31T11:44:26+00:00"
+            "time": "2017-01-31T15:53:06+00:00"
         },
         {
             "name": "twbs/bootstrap",
