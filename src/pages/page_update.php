@@ -5,7 +5,7 @@
  * @license GPL-3
  * @author lorenzo at poixson.com
  * @link http://poixson.com/
- */
+ * /
 namespace pxn\gcWebsite\pages;
 
 use pxn\phpPortal\pages\Blog_Queries;
@@ -45,3 +45,4 @@ class page_update extends \pxn\phpPortal\Page {
 
 
 }
+*/
