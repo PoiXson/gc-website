@@ -34,10 +34,10 @@ class gcShell extends \pxn\phpUtils\app\ShellApp {
 		// db command
 		if ($arg == 'db') {
 			$result = \pxn\pxdb\shell\dbCommands::RunShellCommand();
-			$this->setRendered();
 			if ($result !== TRUE) {
 				ExitNow(Defines::EXIT_CODE_INTERNAL_ERROR);
 			}
+			$this->setRendered();
 			return TRUE;
 		}
 
