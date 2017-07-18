@@ -8,6 +8,6 @@
 namespace pxn\gcWebsite\pages;
 
 
-class page_blog extends \pxn\phpPortal\pages\Blog {
+class page_blog extends \pxn\phpPortal\pages\blog\Blog {
 
 }
