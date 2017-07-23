@@ -34,7 +34,8 @@
 		"pxn/phpPortal":      "0.1.*",
 		"twig/twig":          "v2.4.*",
 		"components/jquery":  "3.2.*",
-		"twbs/bootstrap":     "v3.3.*"
+		"twbs/bootstrap":     "v3.3.*",
+		"michelf/php-markdown": "1.7.*"
 	},
 	"require-dev": {
 		"phpunit/phpunit": "6.*"
