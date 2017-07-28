@@ -14,7 +14,7 @@ require(__DIR__.'/../pxnloader.php');
 
 // gc website
 $app = register_app('pxn\\gcWebsite\\gcWebsite');
-$app->setDefaultPage('blog');
+\pxn\phpPortal\ConfigPortal::setDefaultPage('blog');
 
 // shell tools
 $app = register_app('pxn\\gcWebsite\\gcShell');
